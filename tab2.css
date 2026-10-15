@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f8;
+    color: #222;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    background-color: #172554;
+    color: white;
+}
+
+#logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+#title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.blocks {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+
+.title2,
+#bookings {
+    min-width: 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#topic {
+    margin-bottom: 20px;
+    color: #172554;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr) 100px minmax(0, 1fr) 100px minmax(0, 1fr);
+    column-gap: 10px;
+    row-gap: 15px;
+    align-items: start;
+}
+
+.movies img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.movdet {
+    min-width: 0;
+    min-height: 100px;
+    padding: 8px;
+    margin: 0;
+    background-color: #f5f6fa;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+}
+
+.name {
+    margin-bottom: 10px;
+    color: #e01d04;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.time {
+    margin-bottom: 8px;
+    color: #3007e3;
+    font-size: 21px;
+}
+
+.rupees {
+    color: #037c28;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+#booked {
+    margin-top: 25px;
+}
+
+#booked::before {
+    content: "Booked";
+    display: block;
+    margin-bottom: 15px;
+    color: #172554;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#booked form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#booked label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#booked input,
+#booked select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#booked button,
+#bookings button {
+    padding: 10px 14px;
+    margin: 5px 5px 5px 0;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#booked button:hover,
+#bookings button:hover {
+    background-color: #172554;
+}
+
+#bookings h3 {
+    margin-top: 0;
+    color: #172554;
+    font-size: 22px;
+}
+
+#bookings p {
+    color: #080808;
+    line-height: 1.5;
+}
+
+#bookings input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+}
+
+@media (max-width: 1100px) {
+    .blocks {
+        grid-template-columns: 1fr;
+    }
+
+    .movies {
+        grid-template-columns: 100px minmax(0, 1fr) 100px minmax(0, 1fr) 100px minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .head {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    #logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    #title {
+        font-size: 20px;
+    }
+
+    #subtitle {
+        font-size: 12px;
+    }
+
+    .blocks {
+        padding: 12px;
+    }
+
+    .title2,
+    #bookings {
+        padding: 12px;
+    }
+
+    .movies {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 12px 10px;
+    }
+
+    .movies img {
+        height: 120px;
+    }
+
+    .movdet {
+        min-height: 120px;
+    }
+
+    .name {
+        font-size: 14px;
+    }
+}
